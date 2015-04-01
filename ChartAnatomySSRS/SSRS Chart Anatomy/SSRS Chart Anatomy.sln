@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SSRS Chart Anatomy", "SSRS Chart Anatomy\SSRS Chart Anatomy.rptproj", "{AEA1392E-0C97-40C8-9231-E40028814F8A}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEA1392E-0C97-40C8-9231-E40028814F8A}.Debug|Default.ActiveCfg = Debug
+		{AEA1392E-0C97-40C8-9231-E40028814F8A}.Debug|Default.Build.0 = DebugLocal
+		{AEA1392E-0C97-40C8-9231-E40028814F8A}.Debug|Default.Deploy.0 = DebugLocal
+		{AEA1392E-0C97-40C8-9231-E40028814F8A}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{AEA1392E-0C97-40C8-9231-E40028814F8A}.DebugLocal|Default.Build.0 = DebugLocal
+		{AEA1392E-0C97-40C8-9231-E40028814F8A}.Release|Default.ActiveCfg = Release
+		{AEA1392E-0C97-40C8-9231-E40028814F8A}.Release|Default.Build.0 = Release
+		{AEA1392E-0C97-40C8-9231-E40028814F8A}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
