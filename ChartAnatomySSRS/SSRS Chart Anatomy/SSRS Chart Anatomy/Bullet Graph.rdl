@@ -469,7 +469,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Delete Qualitative Ranges (LinearRange1, ...2, ...3)</Value>
+                <Value>Setup the Featured Measure (LinearPointer1) with SUM(Sales_Actual)</Value>
                 <Style>
                   <FontFamily>Segoe UI</FontFamily>
                 </Style>
@@ -482,7 +482,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Setup the Data with Featured Measure (LinearPointer1)</Value>
+                <Value>Setup Comparative Measure (LinearPointer2) with SUM(Sales_Forecast)</Value>
                 <Style>
                   <FontFamily>Segoe UI</FontFamily>
                 </Style>
@@ -495,7 +495,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Setup Comparative Measure (LinearPointer2)</Value>
+                <Value>Set LinearScale Min/Max (Min: 2000000000 and Max to expression =((Fields!Sales_Forecast_Plus_15_Percent.Value + 1000000000) \ 1000000000) * 1000000000 </Value>
                 <Style>
                   <FontFamily>Segoe UI</FontFamily>
                 </Style>
@@ -508,33 +508,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Set LinearScale Max/Min and Number format accordingly</Value>
-                <Style>
-                  <FontFamily>Segoe UI</FontFamily>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <ListStyle>Numbered</ListStyle>
-            <ListLevel>1</ListLevel>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Drop in another Bullet Graph</Value>
-                <Style>
-                  <FontFamily>Segoe UI</FontFamily>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <ListStyle>Numbered</ListStyle>
-            <ListLevel>1</ListLevel>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Setup Featured and Comparative Measures again.</Value>
+                <Value>Set Number format accordingly</Value>
                 <Style>
                   <FontFamily>Segoe UI</FontFamily>
                 </Style>
@@ -561,8 +535,8 @@
         <rd:DefaultName>Textbox8</rd:DefaultName>
         <Top>1.92583in</Top>
         <Left>0.68278in</Left>
-        <Height>1.29291in</Height>
-        <Width>4.125in</Width>
+        <Height>2.11583in</Height>
+        <Width>4.51042in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -592,8 +566,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>3.34313in</Top>
-        <Left>0.41194in</Left>
+        <Top>4.25285in</Top>
+        <Left>0.41195in</Left>
         <Height>0.3125in</Height>
         <Width>2.36459in</Width>
         <ZIndex>5</ZIndex>
@@ -639,7 +613,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>3.78062in</Top>
+        <Top>4.69035in</Top>
         <Left>0.68278in</Left>
         <Height>1.29291in</Height>
         <Width>4.125in</Width>
@@ -655,7 +629,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>5.07353in</Height>
+    <Height>5.98326in</Height>
     <Style />
   </Body>
   <Width>6.80083in</Width>
