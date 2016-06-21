@@ -1,0 +1,8 @@
+// Measure: Moving 7-day Average
+
+Moving 7-day Avg = AVERAGEX(
+   DATESINPERIOD(
+      'Orders'[Ship Date],
+      LASTDATE('Orders'[Ship Date]), -7, DAY), 
+   'Orders'[Sum of Discount]
+)
