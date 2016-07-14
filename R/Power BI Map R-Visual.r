@@ -6,6 +6,8 @@
 
 # TODO:
 #	Draw points and text after lines, and only as many times as necessary (separate for loop)
+#   Bubble Legend
+#   Remove Color Palette for Points. Using alpha value to identify patterns when overplotting points.
 
 library(maps)		# for map
 library(geosphere)	# for great circle points
