@@ -4,7 +4,6 @@
 #Remove duplicated rows
 #dataset <- unique(dataset)
 
-
 # TODO:
 #	Draw points and text after lines, and only as many times as necessary (separate for loop)
 
@@ -16,16 +15,20 @@ lat <- c(dataset$OriginLat, dataset$DestinationLat)
 lon <- c(dataset$OriginLon, dataset$DestinationLon)
 
 #do a bit of Geometry
-viewport_angle <- 68 * (pi/180)
-
-x <- c( (    ( max(lon) - ( (max(lon) - min(lon)) / 2 ) )    -    ( ((max(lat)+1) - (min(lat)-1)) / 2 ) * tan(viewport_angle )      ) ,
-           (    ( max(lon) - ( (max(lon) - min(lon)) / 2 ) )    +    ( ((max(lat)+1) - (min(lat)-1)) / 2 ) * tan(viewport_angle )      )
-          )
+viewport_angle <- 63.4349 * (pi/180)
 
 # finding bounding box points
-# x <- c(min(lon) - 1, max(lon) + 1)	
-
-y <- c(min(lat)-1, max(lat)+1 )	# old values = 12.039321, 71.856229
+if ( (max(lat) - min(lat)) / (max(lon) - min(lon)) >= .5 ) {
+  x <- c( (    ( max(lon) - ( (max(lon) - min(lon)) / 2 ) )    -    ( ((max(lat)+1) - (min(lat)-1)) / 2 ) * tan(viewport_angle )      ) ,
+             (    ( max(lon) - ( (max(lon) - min(lon)) / 2 ) )    +    ( ((max(lat)+1) - (min(lat)-1)) / 2 ) * tan(viewport_angle )      )
+            )
+  y <- c(min(lat)-1, max(lat)+1 )	
+} else {
+x <- c(min(lon)-5, max(lon)+5 )
+y <- c( (    ( max(lat) - ( (max(lat) - min(lat)) / 2 ) )    -    ( ((max(lon)+5) - (min(lon)-5)) / 2 ) / tan(viewport_angle )      ) ,
+           (    ( max(lat) - ( (max(lat) - min(lat)) / 2 ) )    +    ( ((max(lon)+5) - (min(lon)-5)) / 2 ) / tan(viewport_angle )      )
+          )
+}
 
 # create map and points
 map("world", col="#F1F1F1", fill=TRUE, bg="#FFFFFF", lwd=0.05, xlim=x, ylim=y, mar=rep(0,4))   # map w/ zoom
