@@ -11,6 +11,7 @@
 library(maps)		# for map
 library(geosphere)	# for great circle points
 library(mapproj)	# for points
+library(shape)          # for gradient legend
 
 
 # Calculate best map limits to maintain 2:1 aspect ratio
@@ -67,7 +68,7 @@ for (j in 1:nrow(dataset)) {
 
 # Sum Flights by Destination
 dataset2 <- aggregate(dataset$"Departures Performed", by=list(dataset$"DEST", dataset$"DestinationLat", dataset$"DestinationLon"), FUN=sum)
-names(dataset2) <- c("DEST", "DestinationLat", "DestinationLon", "Departures by Destination")  # change column names
+names(dataset2) <- c("DEST", "DestinationLat", "DestinationLon", "Departures by Destination")  #change column names
 
 # Draw bubbles for Flights by Destination
 for (a in 1:nrow(dataset2)) {
@@ -93,7 +94,7 @@ for (j in 1:nrow(dataset)) {
 legend(
    grconvertX(0.01, "npc"), 
    grconvertY(0.15, "npc"),
-   c('Origins', 'Destinations'), 
+   c('Origin', 'Destination'), 
    pch=c(25, 21), 
    col=c("#ff9147", "#4C4D8B"), 
    pt.bg=c("#FFED47",rgb( red=132, green=134, blue=242, alpha = 125, max=255 ) ),
@@ -102,3 +103,26 @@ legend(
    ncol=2,
    pt.cex = 1.5
 )
+
+# Add Lines Legend
+
+maxcnt <- max(dataset$"Load Factor by Origin")
+mincnt <- min(dataset$"Load Factor by Origin")
+
+if( maxcnt == mincnt) {
+    mincnt = 0.0 } 
+
+max_formatted <- maxcnt * 100
+min_formatted <- mincnt * 100
+
+colorlegend(
+    posx = c(0.9, 0.93), 
+    posy = c(0.05, 0.3), 
+    col = ln_col,
+    zlim =c(min_formatted,max_formatted ),
+    zval=c(min_formatted, max_formatted ),
+    main="Load Factor",
+    main.cex = 1, 
+    main.col = "black", 
+    lab.col = "black", 
+    digit = 2)
